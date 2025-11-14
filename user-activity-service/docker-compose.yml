@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   mongo:
     image: mongo:6.0
@@ -21,7 +23,7 @@ services:
       - mongo
 
   zookeeper:
-    image: bitnami/zookeeper:latest
+    image: bitnami/zookeeper:3.9.0
     container_name: zookeeper
     ports:
       - "2181:2181"
@@ -29,7 +31,7 @@ services:
       ALLOW_ANONYMOUS_LOGIN: "yes"
 
   kafka:
-    image: bitnami/kafka:latest
+    image: bitnami/kafka:3.5.1
     container_name: kafka
     ports:
       - "9092:9092"

@@ -10,11 +10,8 @@ app.use(express.json());
 app.use("/logs", userActivityRoutes);
 
 const initApp = async () => {
-  console.log("a1")
   connectDB();
-  console.log("a2")
   await startConsumer();
-  console.log("a3")
 
   app.listen(port, () => {
     console.log(`Application Running Successfuly at ${port}`);
